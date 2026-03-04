@@ -116,6 +116,14 @@ a:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.24);
 }
 
+.image-source {
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  color: var(--muted);
+  text-align: center;
+}
+
 .brand-label {
   margin: 0;
   font-size: 0.74rem;
@@ -322,7 +330,7 @@ a:hover {
   max-height: 420px;
   object-fit: cover;
   display: block;
-  margin: 20px 0;
+  margin: 20px 0 8px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
   background: #fff;
@@ -332,10 +340,14 @@ a:hover {
 .post-hero.is-portrait {
   width: min(100%, 420px);
   max-height: 640px;
-  margin: 20px auto;
+  margin: 20px auto 8px;
   object-fit: contain;
   background: linear-gradient(180deg, #f7fbf8, #eef4ef);
   padding: 10px;
+}
+
+.post-content .image-source {
+  margin-bottom: 14px;
 }
 
 .source-button {
