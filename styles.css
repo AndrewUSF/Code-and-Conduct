@@ -68,6 +68,7 @@ a:hover {
   background:
     linear-gradient(130deg, rgba(0, 79, 54, 0.96), rgba(0, 103, 71, 0.95));
   isolation: isolate;
+  overflow: hidden;
 }
 
 .header::before {
@@ -75,12 +76,13 @@ a:hover {
   position: absolute;
   inset: 0;
   background-image: url("./assets/images/wavy-lines-usfgreen.svg");
-  background-size: 800px;
-  background-position: right top;
+  background-size: 1180px;
+  background-position: right -120px top -140px;
   background-repeat: no-repeat;
-  opacity: 0.55;
+  opacity: 0.48;
   mix-blend-mode: screen;
-  z-index: -2;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .header::after {
@@ -88,8 +90,14 @@ a:hover {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(0, 66, 45, 0.75) 0%, rgba(0, 66, 45, 0.18) 52%, rgba(0, 66, 45, 0.05) 100%);
-  z-index: -1;
+    linear-gradient(100deg, rgba(0, 58, 39, 0.62) 0%, rgba(0, 66, 45, 0.34) 42%, rgba(0, 86, 59, 0.1) 72%, rgba(0, 103, 71, 0) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.header > * {
+  position: relative;
+  z-index: 1;
 }
 
 .brand-row {
@@ -388,7 +396,8 @@ a:hover {
 
 @media (max-width: 760px) {
   .header::before {
-    background-size: 620px;
+    background-size: 860px;
+    background-position: right -170px top -120px;
   }
 
   .section,
