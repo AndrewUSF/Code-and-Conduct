@@ -32,10 +32,7 @@ body {
   font-family: "Instrument Sans", "Avenir Next", "Segoe UI", sans-serif;
   color: var(--text);
   line-height: 1.65;
-  background:
-    radial-gradient(circle at 100% 0%, rgba(11, 123, 85, 0.12), transparent 42%),
-    radial-gradient(circle at 0% 100%, rgba(198, 182, 108, 0.2), transparent 45%),
-    var(--bg);
+  background: #eef4ef;
 }
 
 a {
@@ -321,6 +318,15 @@ a:hover {
   box-shadow: 0 14px 28px rgba(0, 65, 45, 0.09);
 }
 
+.post-hero.is-portrait {
+  width: min(100%, 420px);
+  max-height: 640px;
+  margin: 20px auto;
+  object-fit: contain;
+  background: linear-gradient(180deg, #f7fbf8, #eef4ef);
+  padding: 10px;
+}
+
 .source-button {
   display: inline-flex;
   align-items: center;
@@ -393,5 +399,11 @@ a:hover {
   .source-button {
     width: 100%;
     justify-content: center;
+  }
+
+  .post-hero.is-portrait {
+    width: 100%;
+    max-height: 520px;
+    padding: 8px;
   }
 }
