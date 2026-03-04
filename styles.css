@@ -234,8 +234,11 @@ a:hover {
 }
 
 .article {
-  border-top: 1px solid var(--line);
   background: #ffffff;
+}
+
+.article + .article {
+  border-top: 1px solid var(--line);
 }
 
 .article h3 {
